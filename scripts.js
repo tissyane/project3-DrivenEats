@@ -31,24 +31,22 @@ let isBtnActive = false;
 
 function finalizarPedido () {
     if (isBtnActive) {
-    const prato_nome = ('.prato .escolhido .item_title p' ).innerHTML;
-    let prato_preco = '.prato span';
-    let bebida_nome = '.bebida item_title';
-    let bebida_preco = '.bebida span';
-    let sobremesa_nome = '.sobremesa item_title';
-    let sobremesa_preco = '.sobremesa span';
+    const prato_nome = prato.querySelector('.item_title').textContent;
+    const bebida_nome = bebida.querySelector('.item_title').textContent;
+    const sobremesa_nome = sobremesa.querySelector('.item_title').textContent;
+    const prato_preco = Number.parseFloat(prato.querySelector('span').textContent);
+    const bebida_preco = Number.parseFloat(bebida.querySelector('span').textContent);
+    const sobremesa_preco = Number.parseFloat(sobremesa.querySelector('span').textContent);
+    const total = (prato_preco + bebida_preco + sobremesa_preco);
+    resultado = total.toFixed(2).replace(".", ",");
     const mensagem = `
             Olá, gostaria de fazer o pedido:
                 Prato: ${prato_nome}
                 Bebida: ${bebida_nome}
-                Sobremesa: ${sobremesa_nome}`
+                Sobremesa: ${sobremesa_nome}
+                Total: R$ ${resultado}
+                `
+                
     alert(mensagem);
     }
-
-    
-
-
-
-
 }
-
