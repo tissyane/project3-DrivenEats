@@ -34,19 +34,17 @@ function finalizarPedido () {
     const prato_nome = prato.querySelector('.item_title').textContent;
     const bebida_nome = bebida.querySelector('.item_title').textContent;
     const sobremesa_nome = sobremesa.querySelector('.item_title').textContent;
-    const prato_preco = Number.parseFloat(prato.querySelector('span').textContent);
-    const bebida_preco = Number.parseFloat(bebida.querySelector('span').textContent);
-    const sobremesa_preco = Number.parseFloat(sobremesa.querySelector('span').textContent);
+    const prato_preco = Number.parseFloat((prato.querySelector('span').textContent).replace(",", "."));
+    const bebida_preco = Number.parseFloat((bebida.querySelector('span').textContent).replace(",", "."));
+    const sobremesa_preco = Number.parseFloat((sobremesa.querySelector('span').textContent).replace(",", "."));
     const total = (prato_preco + bebida_preco + sobremesa_preco);
     resultado = total.toFixed(2).replace(".", ",");
-    const mensagem = `
-            Olá, gostaria de fazer o pedido:
-                Prato: ${prato_nome}
-                Bebida: ${bebida_nome}
-                Sobremesa: ${sobremesa_nome}
-                Total: R$ ${resultado}
-                `
-                
-    alert(mensagem);
+    const mensagem = encodeURIComponent(`gostaria de fazer o pedido:\n- Prato: ${prato_nome}\n- Bebida: ${bebida_nome}\n- Sobremesa: ${sobremesa_nome}\n Total: R$ ${resultado}`);
+       
+    let url = (`https://api.whatsapp.com/send?phone=5548991631164&text= Olá, ${mensagem}`);
+
+    window.open(url);
+
     }
+
 }
