@@ -83,9 +83,9 @@ function validarPedido() {
 
 function finalizarPedido() {
   const mensagem = encodeURIComponent(
-    `gostaria de fazer o pedido:\n- Prato: ${prato_nome}\n- Bebida: ${bebida_nome}\n- Sobremesa: ${sobremesa_nome}\n Total: R$ ${total}\n\n Nome: ${nome}\n Endereço: ${endereco}`
+    `Olá, gostaria de fazer o pedido:\n- Prato: ${prato_nome}\n- Bebida: ${bebida_nome}\n- Sobremesa: ${sobremesa_nome}\nTotal: R$ ${total}\n\nNome: ${nome}\nEndereço: ${endereco}`
   );
-  let url = `https://api.whatsapp.com/send?phone=5548991631164&text= Olá, ${mensagem}`;
+  let url = `https://api.whatsapp.com/send?phone=5548991631164&text=${mensagem}`;
   window.open(url);
 }
 
