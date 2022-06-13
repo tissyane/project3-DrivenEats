@@ -111,8 +111,12 @@ header p {
 .drink,
 .dessert {
   display: flex;
-  overflow-x: scroll;
+  overflow-x: scroll;  
 }
+
+::-webkit-scrollbar {
+  display: none;
+  }
 
 ion-icon {
   position: absolute;

@@ -35,7 +35,7 @@ function confirmarDados(){
   nome = prompt("Qual é o seu nome?");
   endereco = prompt("Qual é o seu endereço?");
   }
-  validarPedido ();
+  finalizarPedido ();
 }
 
 function validarPedido() {
