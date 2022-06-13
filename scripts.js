@@ -29,6 +29,14 @@ let bebida = null;
 let sobremesa = null;
 let isBtnActive = false;
 
+function confirmarDados(){
+  
+  nome = prompt("Qual é o seu nome?");
+  endereco = prompt("Qual é o seu endereço?");
+
+  validarPedido ();
+}
+
 function validarPedido() {
   if (isBtnActive) {
     const ativar = document.querySelector(".pedido");
@@ -75,7 +83,7 @@ function validarPedido() {
 
 function finalizarPedido() {
   const mensagem = encodeURIComponent(
-    `gostaria de fazer o pedido:\n- Prato: ${prato_nome}\n- Bebida: ${bebida_nome}\n- Sobremesa: ${sobremesa_nome}\n Total: R$ ${total}`
+    `gostaria de fazer o pedido:\n- Prato: ${prato_nome}\n- Bebida: ${bebida_nome}\n- Sobremesa: ${sobremesa_nome}\n Total: R$ ${total}\n\n Nome: ${nome}\n Endereço: ${endereco}`
   );
   let url = `https://api.whatsapp.com/send?phone=5548991631164&text= Olá, ${mensagem}`;
   window.open(url);
@@ -85,3 +93,5 @@ function cancelarPedido() {
   const cancelar = document.querySelector(".pedido");
   cancelar.classList.add("escondido");
 }
+
+
