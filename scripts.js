@@ -19,6 +19,7 @@ function checarBotao() {
 
     if (isBtnActive) {
       botao.classList.remove("off");
+      botao.classList.add("cursor");
       botao.innerHTML = "Fechar pedido";
     }
   }
