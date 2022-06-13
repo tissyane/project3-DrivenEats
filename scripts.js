@@ -24,27 +24,64 @@ function checarBotao() {
   }
 }
 
-let prato = null
+let prato = null;
 let bebida = null;
 let sobremesa = null;
 let isBtnActive = false;
 
-function finalizarPedido () {
-    if (isBtnActive) {
-    const prato_nome = prato.querySelector('.item_title').textContent;
-    const bebida_nome = bebida.querySelector('.item_title').textContent;
-    const sobremesa_nome = sobremesa.querySelector('.item_title').textContent;
-    const prato_preco = Number.parseFloat((prato.querySelector('span').textContent).replace(",", "."));
-    const bebida_preco = Number.parseFloat((bebida.querySelector('span').textContent).replace(",", "."));
-    const sobremesa_preco = Number.parseFloat((sobremesa.querySelector('span').textContent).replace(",", "."));
-    const total = (prato_preco + bebida_preco + sobremesa_preco);
-    resultado = total.toFixed(2).replace(".", ",");
-    const mensagem = encodeURIComponent(`gostaria de fazer o pedido:\n- Prato: ${prato_nome}\n- Bebida: ${bebida_nome}\n- Sobremesa: ${sobremesa_nome}\n Total: R$ ${resultado}`);
-       
-    let url = (`https://api.whatsapp.com/send?phone=5548991631164&text= Olá, ${mensagem}`);
+function validarPedido() {
+  if (isBtnActive) {
+    const ativar = document.querySelector(".pedido");
+    ativar.classList.remove("escondido");
 
-    window.open(url);
+    const itensPedido = document.querySelector(".itens_pedido");
 
-    }
+    prato_nome = prato.querySelector(".item_title").textContent;
+    const pratofinal = itensPedido.querySelector(".pratoSelecionado");
+    pratofinal.innerHTML = prato_nome;
+    prato_preco = parseFloat(
+      prato.querySelector("span").textContent.replace(",", ".")
+    );
+    const precoPratoFinal = itensPedido.querySelector(".prato-preco");
+    precoPratoFinal.innerHTML = prato_preco.toFixed(2).replace(".", ",");
 
+    bebida_nome = bebida.querySelector(".item_title").textContent;
+    const bebidafinal = itensPedido.querySelector(".bebidaSelecionado");
+    bebidafinal.innerHTML = bebida_nome;
+    bebida_preco = parseFloat(
+      bebida.querySelector("span").textContent.replace(",", ".")
+    );
+    const precobebidaFinal = itensPedido.querySelector(".bebida-preco");
+    precobebidaFinal.innerHTML = bebida_preco.toFixed(2).replace(".", ",");
+
+    sobremesa_nome = sobremesa.querySelector(".item_title").textContent;
+    const sobremesafinal = itensPedido.querySelector(".sobremesaSelecionado");
+    sobremesafinal.innerHTML = sobremesa_nome;
+    sobremesa_preco = parseFloat(
+      sobremesa.querySelector("span").textContent.replace(",", ".")
+    );
+    const precosobremesaFinal = itensPedido.querySelector(".sobremesa-preco");
+    precosobremesaFinal.innerHTML = sobremesa_preco
+      .toFixed(2)
+      .replace(".", ",");
+
+    total = (prato_preco + bebida_preco + sobremesa_preco)
+      .toFixed(2)
+      .replace(".", ",");
+    const valorFinal = itensPedido.querySelector(".preco_Total");
+    valorFinal.innerHTML = `R$ ${total}`;
+  }
+}
+
+function finalizarPedido() {
+  const mensagem = encodeURIComponent(
+    `gostaria de fazer o pedido:\n- Prato: ${prato_nome}\n- Bebida: ${bebida_nome}\n- Sobremesa: ${sobremesa_nome}\n Total: R$ ${total}`
+  );
+  let url = `https://api.whatsapp.com/send?phone=5548991631164&text= Olá, ${mensagem}`;
+  window.open(url);
+}
+
+function cancelarPedido() {
+  const cancelar = document.querySelector(".pedido");
+  cancelar.classList.add("escondido");
 }

@@ -1,171 +1,272 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Roboto", sans-serif;
-    background-color: #E5E5E5;   
+  font-family: "Roboto", sans-serif;
+  background-color: #e5e5e5;
 }
 
 header {
-    width: 100vw;
-    height: 92px;
-    background-color: #CF2B2B;
-    font-weight: 400;
-    padding-left: 21px;
-    color: #FFFFFF;
-    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-    position: fixed;
-    top: 0;
-    left: 0;    
-    z-index: 1;
+  width: 100vw;
+  height: 92px;
+  background-color: #cf2b2b;
+  font-weight: 400;
+  padding-left: 21px;
+  color: #ffffff;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 h1 {
-    font-family: 'Righteous', cursive;
-    font-size: 44px;    
-    margin-top: 8px;
-    letter-spacing: -0.012em;
+  font-family: "Righteous", cursive;
+  font-size: 44px;
+  margin-top: 8px;
+  letter-spacing: -0.012em;
 }
 
 header p {
-    font-size: 18px;    
-    font-weight: 400;
-    margin-top: 5px;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 5px;
 }
 
 .menu {
-    margin-top: 92px;
-    margin-left: 19px;  
-    margin-bottom: 108px;  
-    display: flex;
-    flex-direction: column;
+  margin-top: 92px;
+  margin-left: 19px;
+  margin-bottom: 108px;
+  display: flex;
+  flex-direction: column;
 }
 
 .menu .category_title {
-    margin-top: 31px;
+  margin-top: 31px;
 }
 
 .menu h1 {
-    color: #333333;
-    font-size: 26px;
-    margin-bottom: 17px;
-    letter-spacing: 0.018em;
+  color: #333333;
+  font-size: 26px;
+  margin-bottom: 17px;
+  letter-spacing: 0.018em;
 }
 
 .menu img {
-    width: 144px;
-    height: 87px;
-    border-radius: 4px;
-    object-fit: cover;
+  width: 144px;
+  height: 87px;
+  border-radius: 4px;
+  object-fit: cover;
 }
 
-.prato, .bebida, .sobremesa {
-    width: 172px;
-    background-color: #FFFFFF;
-    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
-    padding: 18px 13px 14px 14px;
-    border-radius: 9px;
-    margin-right: 15px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.prato,
+.bebida,
+.sobremesa {
+  width: 172px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+  padding: 18px 13px 14px 14px;
+  border-radius: 9px;
+  margin-right: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.prato, .sobremesa {
-    height: 216px;
+.prato,
+.sobremesa {
+  height: 216px;
 }
 
 .bebida {
-    height: 202px;
+  height: 202px;
 }
 
 .item_title {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 19px;
-    color: #333333;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  color: #333333;
 }
 
 .item_description {
-    font-size: 15px;
-    color: #A6A6A6; 
-    font-weight: 300;
-    line-height: 17.58px;
+  font-size: 15px;
+  color: #a6a6a6;
+  font-weight: 300;
+  line-height: 17.58px;
 }
 
 .price {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19px;
-    color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #000000;
 }
 
-.menu .food, .drink, .dessert {
-    display: flex;
-    overflow-x: scroll;    
+.menu .food,
+.drink,
+.dessert {
+  display: flex;
+  overflow-x: scroll;
 }
 
 ion-icon {
-    position: absolute;
-    bottom: 14px;
-    right: 13px;
-    color: #FFFFFF;    
+  position: absolute;
+  bottom: 14px;
+  right: 13px;
+  color: #ffffff;
 }
 
-.escolhido {    
-    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
+.escolhido {
+  box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25),
+    inset 0px 0px 0px 5px #32b72f;
 }
 
 .escolhido ion-icon {
-    position: absolute;
-    bottom: 14px;
-    right: 13px;
-    color: green;    
+  position: absolute;
+  bottom: 14px;
+  right: 13px;
+  color: green;
 }
 
 footer {
-    width: 100vw;
-    height: 92px;
-    display: flex;
-    justify-content: center;
-    background-color: #FFFFFF;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
+  width: 100vw;
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .off {
-    background-color: #CBCBCB;
-    font-weight: 400;
+  background-color: #cbcbcb;
+  font-weight: 400;
 }
 
-
 footer div {
-    color: #FFFFFF;
-    background-color: green;
-    width: 100vw;
-    height: 61px;
-    border-radius: 50px;
-    border: none;
-    margin: 15px 25px;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 24px;    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+  color: #ffffff;
+  background-color: #32b72f;
+  width: 100vw;
+  height: 61px;
+  border-radius: 50px;
+  border: none;
+  margin: 15px 25px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pedido {
-    background-color: rgba(255, 255, 255, 0.9);
-    width: 100%;
-    height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.confirmacao {
+  background-color: #50d074;
+  width: 377px;
+  height: 353px;
+  border-radius: 9px;
+  margin-left: 19px;
+  margin-right: 18px;
+  text-align: center;
+  position: relative;
+}
+
+.confirmacao h1 {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  margin-top: 21px;
+}
+
+.botao_confirmar {
+  height: 52px;
+  background-color: #ffffff;
+  border-radius: 100px;
+  margin-left: 19px;
+  margin-right: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 54px;
+  left: 19px;
+  right: 19px;
+}
+
+.botao_confirmar p {
+  font-size: 22px;
+  color: #50d074;
+  font-weight: 700;
+  letter-spacing: 1.8%;
+}
+
+.botao_confirmar:hover {
+  cursor: pointer;
+}
+
+.cancelar {
+  position: absolute;
+  bottom: 17px;
+  left: 19px;
+  right: 19px;
+}
+
+.cancelar p {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.cancelar:hover {
+  cursor: pointer;
+}
+
+.itens_pedido {
+  margin-top: 30px;
+  margin-left: 26px;
+  margin-right: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.itens_pedido p {
+  font-size: 22px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+
+.itens_pedido div {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.escondido {
+  display: none;
+}

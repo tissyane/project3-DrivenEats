@@ -9,6 +9,36 @@
     <link rel="stylesheet" href="styles.css">
 <body>
 
+    <div class="pedido escondido">
+        <div class="confirmacao">
+            <h1>Confirme seu pedido</h1>
+            <div class="itens_pedido">
+                <div>
+                    <p class="pratoSelecionado">Prato</p>
+                    <p class="prato-preco">pratoPreco</p>                    
+                </div>
+                <div>
+                    <p class="bebidaSelecionado">Bebida</p>
+                    <p class="bebida-preco">bebidaPreco</p>
+                </div>
+                <div>
+                    <p class="sobremesaSelecionado">Sobremesa</p>
+                    <p class="sobremesa-preco">sobremesaPreco</p>
+                </div>
+                <div>
+                    <h1 class="totalSelecionado">TOTAL</h1>
+                    <h1 class="preco_Total">pedidoPreco</h1>
+                </div>
+            </div>
+            <div class="botao_confirmar" onclick="finalizarPedido ();">
+                <p>Tudo certo, pode pedir!</p>
+            </div>
+            <div class="cancelar" onclick="cancelarPedido ();">
+                <p>Cancelar</p>
+            </div>
+        </div>
+    </div>
+
     <header>
         <h1>DrivenEats</h1>
         <p>Sua comida em 6 minutos</p>
@@ -19,8 +49,8 @@
 
         <div class="food">           
             <div class="prato" onclick="selecionado (this, 'prato');">
-                <img src="imagens/nachos.jpg" alt="">
-                <p class="item_title">Nachos Supreme</p>
+                <img src="imagens/nachos-ultimate.png" alt="">
+                <p class="item_title">Ultimate Nachos</p>
                 <p class="item_description">Tortillas e molhos artesanais</p>
                 <p class="price">R$ <span>45,90</span></p>
                 <ion-icon name="checkmark-circle"></ion-icon>
@@ -124,14 +154,16 @@
 
     </section>
 
-    
-
     <footer>
-        <div class = "off" onclick="finalizarPedido  ();">
+        <div class = "off" onclick="validarPedido ();">
             <p>Selecione os 3 itens</br>
                 para fechar o pedido</p>
         </div>
+
+        
     </footer>
+
+    
     
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
