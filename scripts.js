@@ -30,10 +30,10 @@ let sobremesa = null;
 let isBtnActive = false;
 
 function confirmarDados(){
-  
+  if (isBtnActive) {
   nome = prompt("Qual é o seu nome?");
   endereco = prompt("Qual é o seu endereço?");
-
+  }
   validarPedido ();
 }
 
